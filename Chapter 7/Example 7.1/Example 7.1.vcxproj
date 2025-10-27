@@ -81,8 +81,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ExecutablePath>$(DXSDK_DIR)Utilities\bin\x64;$(VC_ExecutablePath_x64);$(CommonExecutablePath)</ExecutablePath>
-    <IncludePath>G:\git\03Self\CharacterAnimationWithDirect3DForVS2022\Chapter 7\Example 7.1\bullet3_x64-windows\include\bullet;$(DXSDK_DIR)Include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>G:\git\03Self\CharacterAnimationWithDirect3DForVS2022\Chapter 7\Example 7.1\bullet3_x64-windows\debug\lib;$(DXSDK_DIR)Lib\x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <IncludePath>C:\bullet3-3.25\src;$(DXSDK_DIR)Include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>C:\bullet3-3.25\lib\Debug;$(DXSDK_DIR)Lib\x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <LibraryWPath>$(WindowsSDK_MetadataPath);</LibraryWPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -116,12 +117,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>dxerr.lib;dxguid.lib;d3dx9d.lib;d3d9.lib;winmm.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Bullet3Collision_Debug.lib;Bullet3Common_Debug.lib;Bullet3Dynamics_Debug.lib;Bullet3Geometry_Debug.lib;Bullet3OpenCL_clew_Debug.lib;BulletCollision_Debug.lib;BulletDynamics_Debug.lib;BulletExampleBrowserLib_Debug.lib;BulletFileLoader_Debug.lib;BulletInverseDynamics_Debug.lib;BulletInverseDynamicsUtils_Debug.lib;BulletRobotics_Debug.lib;BulletRoboticsGUI_Debug.lib;BulletSoftBody_Debug.lib;BulletWorldImporter_Debug.lib;BulletXmlWorldImporter_Debug.lib;BussIK_Debug.lib;clsocket_Debug.lib;ConvexDecomposition_Debug.lib;GIMPACTUtils_Debug.lib;gtest_Debug.lib;gwen_Debug.lib;HACD_Debug.lib;LinearMath_Debug.lib;OpenGLWindow_Debug.lib;dxerr.lib;dxguid.lib;d3dx9d.lib;d3d9.lib;winmm.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
