@@ -59,8 +59,7 @@ HRESULT Mesh::Load(const char fName[])
 		else m_textures.push_back(NULL);
 	}
 
-	m_pMesh->OptimizeInplace(D3DXMESHOPT_ATTRSORT | D3DXMESHOPT_COMPACT | D3DXMESHOPT_VERTEXCACHE,
-		(DWORD*)adjacencyBfr->GetBufferPointer(), NULL, NULL, NULL);
+	m_pMesh->OptimizeInplace(D3DXMESHOPT_ATTRSORT | D3DXMESHOPT_COMPACT | D3DXMESHOPT_VERTEXCACHE,(DWORD*)adjacencyBfr->GetBufferPointer(), NULL, NULL, NULL);
 
 	adjacencyBfr->Release();
 	materialBfr->Release();
